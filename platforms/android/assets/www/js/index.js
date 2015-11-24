@@ -62,7 +62,7 @@ var app = {
                     _fileSrc = result.output_path;
                     console.log("IMAGE FINAL => " + _fileSrc)
 
-                    if (result.indexOf("content://") >= 0) {
+                    if (_fileSrc.indexOf("content://") >= 0) {
                         window.FilePath.resolveNativePath(_fileSrc, 
                             function results(file) {
                                 document.querySelector("#imageSrc").src = file;
